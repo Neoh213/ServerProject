@@ -5,32 +5,24 @@ import java.util.Scanner;
  */
 public class Test {
 
-    public static void main (String args[])
-    {
-        System.out.println("enter grades");
+    public static void main (String args[]) {
+        String isPalin = "acca";
 
-        System.out.println("how many grades would you like to enter?");
+        int halfString = isPalin.length()/2;
 
-        Scanner input = new Scanner(System.in);
 
-        int numGrades = input.nextInt();
+        String stringTotal[] = new String[isPalin.length()];
 
-        System.out.println("enter your grades");
-        String[] grades = new String[numGrades];
+        for (int i = 0; i < isPalin.length(); i++){
 
-        for(int i = 0; i<=numGrades;i++)
-        {
-            grades[i] = input.next();
+            stringTotal[i]= isPalin.substring(i);
         }
 
+        for (int i = 0; i < isPalin.length()-1; i++) {
+            System.out.println(stringTotal[i]);
 
-
-
-
-        for(int i = 0; i<=numGrades;i++)
-        {
-            System.out.println(grades[i]);
         }
+
 
 
 
