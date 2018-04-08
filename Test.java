@@ -1,31 +1,33 @@
+import javafx.scene.shape.Circle;
+
 import java.util.Scanner;
+import javax.swing.JFrame;
 
 /**
  * Created by DJ on 1/29/2018.
  */
-public class Test {
+class Test
+{
+    int a = 1;
+    int b = 2;
 
-    public static void main (String args[]) {
-        String isPalin = "acca";
+    Test func(Test obj)
+    {
+        Test obj3 = new Test();
+        obj3 = obj;
+        obj3.a = obj.a++ + ++obj.b;
+        obj.b = obj.b;
+        return obj3;
+    }
 
-        int halfString = isPalin.length()/2;
+    public static void main(String[] args) {
+        Test obj1 = new Test();
+        Test obj2 = obj1.func(obj1);
 
-
-        String stringTotal[] = new String[isPalin.length()];
-
-        for (int i = 0; i < isPalin.length(); i++){
-
-            stringTotal[i]= isPalin.substring(i);
-        }
-
-        for (int i = 0; i < isPalin.length()-1; i++) {
-            System.out.println(stringTotal[i]);
-
-        }
-
-
-
+        System.out.println("obj1.a = " + obj1.a + "  obj1.b = " + obj1.b);
+        System.out.println("obj2.a = " + obj2.a + "  obj2.b = " + obj2.b);
 
 
     }
+
 }

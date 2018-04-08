@@ -160,7 +160,7 @@ public class Client  {
             sOutput.writeObject(username);
             
         }
-        081
+
         catch (IOException eIO) {
             
             display("Exception doing login : " + eIO);
